@@ -35,8 +35,14 @@
 			<div class="form-group mb-3">
 				<label for="descripcion">Descripción</label> <input type="text" class="form-control" id="descripcion" name="descripcion">
 			</div>
+			<select class="form-select mt-3" aria-label="Default select example" name="categoria">
+				  <option value="0" selected>Selecion una categoria</option>
+				  <c:forEach var="categ" items="${listaCategorias}">
+				  <option value="<c:out value="${categ.id}"></c:out>"><c:out value="${categ.nombre}"></c:out></option>
+				  </c:forEach>
+			</select>
 		
-			<div class="container mt-5">
+			<div class="container mt-5  mb-5">
 				<div class="row">
 					<div class="btn-group" role="group" aria-label="Basic mixed styles example">
                 		<button type="Submit"  class="btn btn-success">Agregar</button>

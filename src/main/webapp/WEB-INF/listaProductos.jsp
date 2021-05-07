@@ -51,7 +51,7 @@
 		</div>
 		
 	
-		<!-- 
+		
 		<div class="container col-md-6 mt-5">
 			<h1 style="text-align: center;" class="mt-5 mb-5">Listado del Carrito</h1>
 			
@@ -77,11 +77,11 @@
 				  
 				      <th scope="col">Total</th>
 				      <th scope="col"></th>
-				      <!-- <th scope="col"><c:out value="total += ${producto.precio}"></c:out></th>
+				     <th scope="col"><c:out value="${producto.precio}"></c:out></th>
 
 				  </tr>
 			</table>
-		</div> -->
+		</div> 
 	
 	
 	

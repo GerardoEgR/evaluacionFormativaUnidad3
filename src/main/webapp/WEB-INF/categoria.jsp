@@ -33,7 +33,7 @@
 				<div class="row">
 					<div class="btn-group" role="group" aria-label="Basic mixed styles example">
                 		<button type="Submit"  class="btn btn-success">Agregar</button>
-               		 
+               		 	<a href="/home" class="btn btn-warning">Volver</a>	
             		</div>
 				</div>
 			</div>
@@ -42,12 +42,37 @@
 		</form>
 	</div>
 	
-	
+	<div class="container col-md-6 mt-5">
+			<table class="table text-center table-striped table-sm">
+				  <thead>
+				    <tr class="table-dark">
+				      <th scope="col">#</th>
+				      <th scope="col">Nombre</th>
+				      <th scope="col">Acción</th>
+				    </tr>
+				  </thead>
+				  <tbody>
+				  	<c:forEach var = "categoria" items="${listaCategorias}">
+				    <tr>
+				      <th scope="row"><c:out value="${categoria.id}"></c:out></th>
+				      <td><c:out value="${categoria.nombre}"></c:out></td>
+
+					  <td>
+					  <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+				      		<a href="/categoria/editar/${categoria.id}" class="btn btn-warning">Editar</a>
+	                		<a href="/categoria/eliminar/${categoria.id}" class="btn btn-danger">Eliminar</a>	
+	            	  </div>
+					  </td>
+				    </tr>
+				    </c:forEach>
+				  </tbody>
+			</table>
+		</div>
 	
 	
 	
 	<!-- Footer -->
-		<footer class="bg-light text-center text-lg-start fixed-bottom">
+		<footer class="bg-light text-center text-lg-start ">
 		  <!-- Copyright -->
 		  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
 		    © 2020 Copyright:

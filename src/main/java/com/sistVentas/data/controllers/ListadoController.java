@@ -1,7 +1,6 @@
 package com.sistVentas.data.controllers;
 
 
-import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,7 +35,7 @@ public class ListadoController {
 		
 		model.addAttribute("productos", prod);
 
-		return "carrito.jsp";
+		return "listaProductos.jsp";
 	}
 
 }
